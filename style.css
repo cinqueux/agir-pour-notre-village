@@ -590,6 +590,81 @@ a:hover {
     display: block;
 }
 
+/* === DOCUMENTS === */
+.documents {
+    background: var(--blanc);
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.document-card {
+    display: block;
+    background: var(--fond);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: transform var(--transition), box-shadow var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+.document-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ombre-hover);
+    color: inherit;
+}
+
+.document-thumbnail {
+    position: relative;
+    background: var(--fond-alt);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.document-thumbnail img {
+    max-height: 320px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.document-info {
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.document-info h3 {
+    font-size: 1.05rem;
+    color: var(--brun);
+    margin-bottom: 4px;
+}
+
+.document-info p {
+    font-size: 0.88rem;
+    color: var(--texte-clair);
+    margin-bottom: 10px;
+}
+
+.document-badge {
+    display: inline-block;
+    background: var(--rouge);
+    color: var(--blanc);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 /* === CONTACT === */
 .contact {
     background: var(--fond-alt);
@@ -753,6 +828,11 @@ a:hover {
 
     .conseillers-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
     }
 
     .section {
